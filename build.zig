@@ -7,7 +7,6 @@ pub fn build(b: *Builder) void {
     const exe = b.addExecutable("haldclut", "src/main.zig");
     exe.setTarget(target);
     exe.setBuildMode(mode);
-    exe.linkSystemLibrary("SDL2");
     exe.linkSystemLibrary("SDL2_image");
     exe.linkSystemLibrary("c");
     exe.install();
