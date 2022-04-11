@@ -30,6 +30,8 @@ The program then tries to find the listed files in **both** `source_images` **an
 be photos ran through Darktable with default, minimal processing. No exposure adjustments (automatic or manual), no curves, no color adjustments. `target_images` ought to contain the same images but with the look you're trying to mimic, say, out of camera images with
 certain film simulation.
 
+When shooting images make sure the camera does not apply any kind of optical corrections (for example lens distortion). To ensure this you may want to shoot with an adapted/manual lens that the camera knows nothing about. 
+
 For optimal results both images should be cropped to same size so that they're aligned perfectly. I'd recommend
 also resizing both source and target images to something like 500x300 pixels to minimize the impact of other in-camera processing like noise reduction, sharpening etc. Save them as PNGs. If you want to create a good LUT I'd advise shooting images with many different colors, skin tones, nothing in focus (to make them somewhat blurry) and exposures running from severely underexposed to severely overexposed. I usually want 80+ images for adequately accurate results.
 
