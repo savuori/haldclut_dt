@@ -35,4 +35,4 @@ When shooting images make sure the camera does not apply any kind of optical cor
 For optimal results both images should be cropped to same size so that they're aligned perfectly. I'd recommend
 also resizing both source and target images to something like 500x300 pixels to minimize the impact of other in-camera processing like noise reduction, sharpening etc. Save them as 8-bit PNGs. If you want to create a good LUT I'd advise shooting images with many different colors, skin tones, nothing in focus (to make them somewhat blurry) and exposures running from severely underexposed to severely overexposed. I usually want 80+ images for adequately accurate results.
 
-After that preparation work run `zig-out/bin/haldclut` and hopefully you'll see it outputting several matrices with varying numbers in them and finally writing `lut.png`. Copy that to the directory you've configured Darktable to use for LUTs and check out the results.
+After that preparation work run `zig-out/bin/haldclut` and hopefully you'll see it writing `lut.png`. Copy that to the directory you've configured Darktable to use for LUTs and check out the results.

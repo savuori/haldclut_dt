@@ -4,8 +4,8 @@
 
 
 const sdl = @cImport({
-    @cInclude("SDL2/SDL.h");
-    @cInclude("SDL2/SDL_image.h");
+    @cInclude("SDL.h");
+    @cInclude("SDL_image.h");
 });
 
 const std = @import("std");
@@ -152,7 +152,9 @@ fn loadAndMapImages(from: []const u8, to: []const u8) !void {
 
     defer sdl.SDL_FreeSurface(toSurface);
 
-    assert(fromSurface.w == toSurface.w and fromSurface.h == toSurface.h);
+    if(!(fromSurface.w == toSurface.w and fromSurface.h == toSurface.h)) {
+        warn("These files have different dimensions {s} and {s}! Returning. \n", .{from, to});
+    }
 
     if (fromSurface.pitch != toSurface.pitch) {
         warn("These files have different pixel pitches, {s} and {s} ! Returning.\n", .{ from, to });
@@ -333,7 +335,7 @@ pub fn main() anyerror!void {
 
     defer allocator.free(image_list);
 
-    print_matrix();
+    //print_matrix();
 
     info("creating the result matrix\n", .{});
 
